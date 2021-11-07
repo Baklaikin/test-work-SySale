@@ -124,17 +124,24 @@ export const Quantity = styled.p``;
 export const ProductCard = styled.article`
   position: relative;
   width: 573px;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 30px;
-  /* border:1px solid tomato; */
+  box-shadow: none;
   margin-top: 30px;
   margin-left: 50px;
   height: auto;
   padding: 45px;
+  background-color: #f8fafc;
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 45px #c3d4e4;
+  }
 `;
 
 export const Image = styled.img`
-  /* border:1px solid tomato; */
   width: 256px;
   height: 251px;
   margin-left: auto;
@@ -156,7 +163,7 @@ export const Text = styled.p`
   text-align: center;
   padding: 5px 20px;
   background-color: #efbb37;
-  color: white;
+  color: #fff;
   background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
@@ -168,11 +175,19 @@ export const BuyBtn = styled.button`
   right: 31px;
   width: 47px;
   height: 47px;
-  background: #ffffff;
+  background-color: #fff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   border: none;
+  transition-duration: 500ms;
+  transition-property: background-color;
+  &:hover,
+  &:focus {
+    background-color: #f9fafc;
+    cursor: pointer;
+  }
 `;
+//
 
 export const Title = styled.h3`
   font-size: 24px;
@@ -233,9 +248,16 @@ export const OrderBtn = styled.button`
   height: 38px;
   border-radius: 30px;
   border: none;
-  color: white;
+  color: #fff;
   font-weight: 600;
   font-size: 18;
   line-height: 1.1933;
   background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
+  transition-property: background;
+  transition-duration: 1000ms;
+  &:hover,
+  &:focus {
+    background: linear-gradient(261.65deg, #e9b32c -3.95%, #bf911a 109.44%);
+    cursor: pointer;
+  }
 `;

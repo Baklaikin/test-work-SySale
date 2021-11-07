@@ -20,7 +20,6 @@ import {
   Link,
   BtnText,
   ProductCard,
-  CardBar,
   CardThumb,
   Image,
   CheckboxContainer,
@@ -28,20 +27,64 @@ import {
   OrderContainer,
 } from "./Card.styled";
 import { ReactComponent as BuyIcon } from "../../images/buy.svg";
+import { useState } from "react";
+import MoroccanImg from "images/moroccanoil-rotated.jpg";
 
-function ProdCard({ value }) {
+function ProdCard({ value, name, id }) {
+  const [count, setCount] = useState(1);
+  const [isHovering, setIsHovering] = useState(false);
+  let price = count * 200;
+
+  const onBtnClick = (e) => {
+    switch (e.currentTarget.name) {
+      case "increase":
+        return setCount(count + 1);
+      case "decrease":
+        if (count > 1) {
+          return setCount(count - 1);
+        } else {
+          return;
+        }
+      default:
+        return;
+    }
+  };
+
+  const mouseOverHandler = (e) => {
+    setIsHovering(!isHovering);
+  };
+  const mouseLeaveHandler = (e) => {
+    setIsHovering(!isHovering);
+  };
+
   return (
     <ProductCard>
       <div>
         <div>
           {/* <CardBar> */}
+
           <Text>New</Text>
           <BuyBtn>
             <BuyIcon />
           </BuyBtn>
+
           {/* </CardBar> */}
           <CardThumb>
-            <Image src={value} alt="Concept" />
+            {!isHovering ? (
+              <Image
+                src={value}
+                alt={id}
+                onMouseOver={mouseOverHandler}
+                onMouseLeave={mouseLeaveHandler}
+              />
+            ) : (
+              <Image
+                src={MoroccanImg}
+                alt={id}
+                onMouseOver={mouseOverHandler}
+                onMouseLeave={mouseLeaveHandler}
+              />
+            )}
           </CardThumb>
           <TextContainer>
             <Title>Шампунь</Title>
@@ -72,33 +115,37 @@ function ProdCard({ value }) {
                 </Link>
               </DropContent>
             </Dropdown>
-            <p>200грн</p>
+            <p>{price}грн</p>
           </ColorOptionWrapper>
 
           {/* Checkboxes */}
 
-          <div>
-            <CheckboxContainer role="group" aria-labelledby="newsletter-head">
-              <RadioLabel>
-                <Radio type="radio" defaultChecked name="volume" value="100" />
-                100 мл
-              </RadioLabel>
-              <label>
-                <input type="radio" name="volume" value="200" />
-                200 мл
-              </label>
-              <label>
-                <input type="radio" name="volume" value="300" />
-                300 мл
-              </label>
-            </CheckboxContainer>
-          </div>
+          <CheckboxContainer role="group" aria-labelledby="Quantity-choice">
+            <RadioLabel>
+              <Radio type="radio" defaultChecked name={name} value="100" />
+              100 мл
+            </RadioLabel>
+            <RadioLabel>
+              <Radio type="radio" name={name} value="200" />
+              200 мл
+            </RadioLabel>
+            <RadioLabel>
+              <Radio type="radio" name={name} value="300" />
+              300 мл
+            </RadioLabel>
+          </CheckboxContainer>
+
           {/* Quantity and buy btn */}
+
           <OrderContainer>
             <OrderBtnContainer>
-              <DecreaseBtn>-</DecreaseBtn>
-              <Quantity>1</Quantity>
-              <IncreaseBtn>+</IncreaseBtn>
+              <DecreaseBtn type="button" name="decrease" onClick={onBtnClick}>
+                -
+              </DecreaseBtn>
+              <Quantity>{count}</Quantity>
+              <IncreaseBtn type="button" name="increase" onClick={onBtnClick}>
+                +
+              </IncreaseBtn>
             </OrderBtnContainer>
             <OrderBtn>Купить</OrderBtn>
           </OrderContainer>
