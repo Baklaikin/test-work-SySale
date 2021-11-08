@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/test-work-sysale/static/css/main.05c10658.chunk.css",
-    "main.js": "/test-work-sysale/static/js/main.715d6af0.chunk.js",
-    "main.js.map": "/test-work-sysale/static/js/main.715d6af0.chunk.js.map",
+    "main.js": "/test-work-sysale/static/js/main.1d3526da.chunk.js",
+    "main.js.map": "/test-work-sysale/static/js/main.1d3526da.chunk.js.map",
     "runtime-main.js": "/test-work-sysale/static/js/runtime-main.a1f28e69.js",
     "runtime-main.js.map": "/test-work-sysale/static/js/runtime-main.a1f28e69.js.map",
     "static/js/2.d38afa02.chunk.js": "/test-work-sysale/static/js/2.d38afa02.chunk.js",
@@ -16,13 +16,12 @@
     "static/media/down-arrow.2eda543d.svg": "/test-work-sysale/static/media/down-arrow.2eda543d.svg",
     "static/media/in-order.a1a7fcc0.svg": "/test-work-sysale/static/media/in-order.a1a7fcc0.svg",
     "static/media/moroccanoil-rotated.03c11cde.jpg": "/test-work-sysale/static/media/moroccanoil-rotated.03c11cde.jpg",
-    "static/media/radio.a9e0906d.svg": "/test-work-sysale/static/media/radio.a9e0906d.svg",
     "static/media/rectangle.61b82240.svg": "/test-work-sysale/static/media/rectangle.61b82240.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a1f28e69.js",
     "static/js/2.d38afa02.chunk.js",
     "static/css/main.05c10658.chunk.css",
-    "static/js/main.715d6af0.chunk.js"
+    "static/js/main.1d3526da.chunk.js"
   ]
 }
