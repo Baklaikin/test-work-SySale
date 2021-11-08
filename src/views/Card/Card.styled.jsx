@@ -92,11 +92,12 @@ export const OrderBtnContainer = styled.div`
 export const OrderContainer = styled.div`
   display: flex;
   padding-left: 16px;
+  }
 `;
 
 export const DecreaseBtn = styled.button`
   margin-right: 5px;
-  padding: 10px 10px;
+  padding: 10px 12px;
   border-radius: 30px 0 0 30px;
   border: none;
   background-color: transparent;
@@ -104,22 +105,13 @@ export const DecreaseBtn = styled.button`
 
 export const IncreaseBtn = styled.button`
   margin-left: 5px;
-  padding: 10px 10px;
+  padding: 10px 12px;
   border-radius: 0 30px 30px 0;
   background-color: transparent;
   border: none;
 `;
 
 export const Quantity = styled.p``;
-
-// export const CardBar = styled.div`
-// display:flex;
-// justify-content:space-between;
-// width:100%;
-// /* margin-top:53px; */
-// padding-top:20px;
-
-// `;
 
 export const ProductCard = styled.article`
   position: relative;
@@ -169,24 +161,6 @@ export const Text = styled.p`
   border-radius: 30px;
 `;
 
-export const BuyBtn = styled.button`
-  position: absolute;
-  top: 43px;
-  right: 31px;
-  width: 47px;
-  height: 47px;
-  background-color: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
-  border: none;
-  transition-duration: 500ms;
-  transition-property: background-color;
-  &:hover,
-  &:focus {
-    background-color: #f9fafc;
-    cursor: pointer;
-  }
-`;
 //
 
 export const Title = styled.h3`
@@ -254,10 +228,41 @@ export const OrderBtn = styled.button`
   line-height: 1.1933;
   background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
   transition-property: background;
-  transition-duration: 1000ms;
+  transition-duration: 300ms;
   &:hover,
   &:focus {
     background: linear-gradient(261.65deg, #e9b32c -3.95%, #bf911a 109.44%);
     cursor: pointer;
   }
+`;
+
+export const OrderBtnClicked = styled.button`
+  width: 320px;
+  height: 38px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18;
+  line-height: 1.1933;
+  background: linear-gradient(261.65deg, #ffd773 -3.95%, #e2b645 109.44%);
+  cursor: pointer;
+`;
+
+export const MoreProductsThumb = styled.div`
+  width: 256px;
+  height: 261px;
+  margin-top: 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-left: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover > img {
+    transform: scale(1.5);
+  }
+`;
+
+export const MoreProductsImg = styled.img`
+  transition: 0.2s linear;
+  object-fit: cover;
 `;
