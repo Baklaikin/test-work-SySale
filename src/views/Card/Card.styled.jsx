@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { ReactComponent as Scrollbar } from "images/rectangle.svg";
 import { ReactComponent as ArrowUpwards } from "images/arrowup.svg";
 import { ReactComponent as DownArrowIcon } from "../../images/down-arrow.svg";
-import { ReactComponent as RadioIcon } from "../../images/radio.svg";
 
 export const Dropdown = styled.div`
   position: relative;
@@ -19,10 +18,6 @@ export const Dropdown = styled.div`
   &:hover .ArrowUp {
     display: block;
   }
-
-  /* &:hover .DownArrow{
-    display:none;
-} */
 `;
 
 export const DropButton = styled.button`

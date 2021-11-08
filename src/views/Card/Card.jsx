@@ -32,7 +32,7 @@ import BuyBtnInOrder from "views/BuyBtn/BuyBtnInOrder";
 import { useState } from "react";
 import { OrderBtnClicked } from "./Card.styled";
 
-function ProdCard({ value, name, id, prod1, prod2 }) {
+function ProdCard({ value, name, prod1, prod2 }) {
   const [count, setCount] = useState(1);
   const [isHovering, setIsHovering] = useState(false);
   const [inOrder, setInOrder] = useState(false);
@@ -78,14 +78,14 @@ function ProdCard({ value, name, id, prod1, prod2 }) {
               {!isHovering ? (
                 <Image
                   src={value.initial}
-                  alt={id}
+                  alt={name}
                   onMouseOver={mouseOverHandler}
                   onMouseLeave={mouseLeaveHandler}
                 />
               ) : (
                 <Image
                   src={value.rotate}
-                  alt={id}
+                  alt={name}
                   onMouseOver={mouseOverHandler}
                   onMouseLeave={mouseLeaveHandler}
                 />

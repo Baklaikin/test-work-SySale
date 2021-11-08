@@ -41,7 +41,7 @@ function Homepage() {
         <li>
           <ProdCard
             value={concept}
-            name={concept}
+            name={concept.initial}
             prod1={moroccan.initial}
             prod2={pantene.initial}
           />
