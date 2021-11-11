@@ -2,12 +2,6 @@ import {
   Dropdown,
   DropButton,
   DropContent,
-  Radio,
-  OrderBtn,
-  IncreaseBtn,
-  DecreaseBtn,
-  Quantity,
-  RadioLabel,
   ArrowUp,
   DownArrow,
   ScrollBar,
@@ -21,17 +15,15 @@ import {
   ProductCard,
   CardThumb,
   Image,
-  CheckboxContainer,
-  OrderBtnContainer,
-  OrderContainer,
   MoreProductsThumb,
   MoreProductsImg,
-  AltRadioBtn,
 } from "./Card.styled";
 import BuyButton from "views/BuyBtn/BuyButton";
 import BuyBtnInOrder from "views/BuyBtn/BuyBtnInOrder";
 import { useState } from "react";
 import { OrderBtnClicked } from "./Card.styled";
+import Checkboxes from "views/Checkboxes/Checkboxes";
+import OrderBtns from "views/OrderBtns/OrderBtns";
 
 function ProdCard({ value, name, prod1, prod2 }) {
   const [count, setCount] = useState(1);
@@ -123,50 +115,13 @@ function ProdCard({ value, name, prod1, prod2 }) {
               </Dropdown>
               <p>{price}грн</p>
             </ColorOptionWrapper>
-
-            {/* Checkboxes */}
-
-            <CheckboxContainer role="group" aria-labelledby="Quantity-choice">
-              <RadioLabel>
-                <Radio type="radio" defaultChecked name={name} value="100" />
-                <AltRadioBtn>
-                  <span></span>
-                </AltRadioBtn>
-                100 мл
-              </RadioLabel>
-              <RadioLabel>
-                <Radio type="radio" name={name} value="200" />
-                <AltRadioBtn>
-                  <span></span>
-                </AltRadioBtn>
-                200 мл
-              </RadioLabel>
-              <RadioLabel>
-                <Radio type="radio" name={name} value="300" />
-                <AltRadioBtn>
-                  <span></span>
-                </AltRadioBtn>
-                300 мл
-              </RadioLabel>
-            </CheckboxContainer>
-            <OrderContainer>
-              <OrderBtnContainer>
-                <DecreaseBtn type="button" name="decrease" onClick={onBtnClick}>
-                  -
-                </DecreaseBtn>
-                <Quantity>{count}</Quantity>
-                <IncreaseBtn type="button" name="increase" onClick={onBtnClick}>
-                  +
-                </IncreaseBtn>
-              </OrderBtnContainer>
-              {!inOrder ? (
-                <OrderBtn onClick={buyClickHandler}>Купить</OrderBtn>
-              ) : (
-                <OrderBtnClicked onClick={buyClickHandler}>
-                  Уже в корзине
-                </OrderBtnClicked>
-              )}
-            </OrderContainer>
+            <Checkboxes name={name} />
+            <OrderBtns
+              onBtnClick={onBtnClick}
+              buyClickHandler={buyClickHandler}
+              inOrder={inOrder}
+              count={count}
+            />
           </div>
         </div>
       </ProductCard>
