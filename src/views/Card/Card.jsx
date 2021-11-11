@@ -26,6 +26,7 @@ import {
   OrderContainer,
   MoreProductsThumb,
   MoreProductsImg,
+  AltRadioBtn,
 } from "./Card.styled";
 import BuyButton from "views/BuyBtn/BuyButton";
 import BuyBtnInOrder from "views/BuyBtn/BuyBtnInOrder";
@@ -128,14 +129,23 @@ function ProdCard({ value, name, prod1, prod2 }) {
             <CheckboxContainer role="group" aria-labelledby="Quantity-choice">
               <RadioLabel>
                 <Radio type="radio" defaultChecked name={name} value="100" />
+                <AltRadioBtn>
+                  <span></span>
+                </AltRadioBtn>
                 100 мл
               </RadioLabel>
               <RadioLabel>
                 <Radio type="radio" name={name} value="200" />
+                <AltRadioBtn>
+                  <span></span>
+                </AltRadioBtn>
                 200 мл
               </RadioLabel>
               <RadioLabel>
                 <Radio type="radio" name={name} value="300" />
+                <AltRadioBtn>
+                  <span></span>
+                </AltRadioBtn>
                 300 мл
               </RadioLabel>
             </CheckboxContainer>

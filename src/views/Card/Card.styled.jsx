@@ -87,7 +87,6 @@ export const OrderBtnContainer = styled.div`
 export const OrderContainer = styled.div`
   display: flex;
   padding-left: 16px;
-  }
 `;
 
 export const DecreaseBtn = styled.button`
@@ -208,10 +207,6 @@ export const CheckboxContainer = styled.div`
   flex-direction: column;
 `;
 
-export const Radio = styled.input``;
-
-export const RadioLabel = styled.label``;
-
 export const OrderBtn = styled.button`
   width: 320px;
   height: 38px;
@@ -260,4 +255,33 @@ export const MoreProductsThumb = styled.div`
 export const MoreProductsImg = styled.img`
   transition: 0.2s linear;
   object-fit: cover;
+`;
+
+export const AltRadioBtn = styled.span`
+  margin-left: -30px;
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #dedede;
+  position: absolute;
+`;
+
+export const Radio = styled.input`
+  position: absolute;
+  appearance: none;
+
+  &:checked + span > span {
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
+  }
+`;
+
+export const RadioLabel = styled.label`
+  margin-left: 30px;
+  margin-bottom: 15px;
 `;
