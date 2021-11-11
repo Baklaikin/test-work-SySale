@@ -20,10 +20,9 @@ import {
 } from "./Card.styled";
 import BuyButton from "views/BuyBtn/BuyButton";
 import BuyBtnInOrder from "views/BuyBtn/BuyBtnInOrder";
-import { useState } from "react";
-import { OrderBtnClicked } from "./Card.styled";
 import Checkboxes from "views/Checkboxes/Checkboxes";
 import OrderBtns from "views/OrderBtns/OrderBtns";
+import { useState } from "react";
 
 function ProdCard({ value, name, prod1, prod2 }) {
   const [count, setCount] = useState(1);

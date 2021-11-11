@@ -7,6 +7,7 @@ import {
   IncreaseBtn,
   DecreaseBtn,
 } from "views/OrderBtns/OrderBtns.styled";
+
 export default function OrderBtns({
   count,
   inOrder,
