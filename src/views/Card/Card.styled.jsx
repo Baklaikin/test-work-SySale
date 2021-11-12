@@ -15,7 +15,7 @@ export const Dropdown = styled.div`
     display: block;
   }
 
-  &:hover .ArrowUp {
+  &:hover + div > div {
     display: block;
   }
 `;
@@ -32,13 +32,6 @@ export const DropButton = styled.button`
   padding: 8px 20px;
   font-size: 16px;
   border: none;
-
-  &:hover .DownArrow {
-  }
-
-  &:hover .ArrowUp {
-    display: block;
-  }
 `;
 
 export const DropContent = styled.div`
@@ -126,8 +119,6 @@ export const Text = styled.p`
   border-radius: 30px;
 `;
 
-//
-
 export const Title = styled.h3`
   font-size: 24px;
   line-height: 1.1933;
@@ -165,18 +156,9 @@ export const ArrowUp = styled(ArrowUpwards)`
   position: absolute;
   top: 12px;
   right: 21px;
-  display: none;
 `;
 
 export const DownArrow = styled(DownArrowIcon)``;
-
-// export const CheckboxContainer = styled.div`
-//   margin-top: 15px;
-//   margin-bottom: 26px;
-//   padding: 0 14px;
-//   display: flex;
-//   flex-direction: column;
-// `;
 
 export const MoreProductsThumb = styled.div`
   width: 256px;

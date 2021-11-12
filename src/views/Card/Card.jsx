@@ -45,12 +45,9 @@ function ProdCard({ value, name, prod1, prod2 }) {
     }
   };
 
-  const mouseOverHandler = (e) => {
-    setIsHovering(!isHovering);
-  };
-  const mouseLeaveHandler = (e) => {
-    setIsHovering(!isHovering);
-  };
+  const mouseOverHandler = (e) => setIsHovering(!isHovering);
+
+  const mouseLeaveHandler = (e) => setIsHovering(!isHovering);
 
   const buyClickHandler = () => {
     if (inOrder) {
@@ -94,10 +91,12 @@ function ProdCard({ value, name, prod1, prod2 }) {
             </TextContainer>
             <ColorOptionWrapper>
               <Dropdown>
-                <DropButton>
+                <DropButton
+                  onMouseOver={mouseOverHandler}
+                  onMouseLeave={mouseLeaveHandler}
+                >
                   <BtnText>Цвет</BtnText>
-                  <DownArrow />
-                  <ArrowUp />
+                  {isHovering ? <ArrowUp /> : <DownArrow />}
                 </DropButton>
                 <DropContent>
                   <ScrollBar />
